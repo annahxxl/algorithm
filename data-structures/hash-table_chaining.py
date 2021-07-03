@@ -2,10 +2,15 @@
 # Chaining (Open Hashing 기법 : 해쉬 테이블 저장공간 외의 공간을 활용)
 # : 충돌이 일어나면, 링크드 리스트 자료 구조를 사용하여 데이터를 추가로 뒤에 연결시켜 저장
 
+import hashlib
+
 hash_table = list([0 for i in range(8)])
 
 def get_key(data):
-  return hash(data)
+  hash_object = hashlib.sha256()
+  hash_object.update(data.encode())
+  hex_dig = hash_object.hexdigest()
+  return int(hex_dig, 16) # 16진수의 문자열을 10진수(정수)로 변환
 
 def hash_function(key):
   return key % 8

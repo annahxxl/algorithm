@@ -2,13 +2,15 @@
 # Linear Probing (Close Hashing 기법 : 해쉬 테이블 저장공간 안의 공간을 활용)
 # : 충돌이 일어나면, 해당 해쉬 주소의 다음 주소부터 맨 처음 나오는 빈 공간에 저장하는 기법 (저장 공간 활용도를 높이기 위한 기법)
 
-from typing import Hashable
-
+import hashlib
 
 hash_table = list([0 for i in range(8)])
 
 def get_key(data):
-  return hash(data)
+  hash_object = hashlib.sha256()
+  hash_object.update(data.encode())
+  hex_dig = hash_object.hexdigest()
+  return int(hex_dig, 16) # 16진수의 문자열을 10진수(정수)로 변환
 
 def hash_function(key):
   return key % 8
