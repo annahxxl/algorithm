@@ -54,15 +54,27 @@ class NodeMgmt:
     if searched == False:
       return False
     # 여기부터 case들을 분리해 코드 작성
-    # case1: 삭제할 Node가 Leaf Node인 경우 (자식 Node ❌)
     # -> self.current_node가 삭제할 Node, self.parent가 삭제할 Node의 부모 Node인 상태
+    # case1: 삭제할 Node가 Leaf Node인 경우 (자식 Node ❌)
     if self.current_node.left == None and self.current_node.right == None:
       if value < self.parent.value:
         self.parent.left = None
       else:
         self.parent.right = None
       del self.current_node
-      
+    # case2-1: 삭제할 Node가 자식 Node를 왼쪽에 한 개 가지고 있을 경우
+    if self.current_node.left != None and self.current_node.right == None:
+      if value < self.parent.value:
+        self.parent.left = self.current_node.left
+      else:
+        self.parent.right = self.current_node.right
+    # case2-2: 삭제할 Node가 자식 Node를 오른쪽에 한 개 가지고 있을 경우
+    if self.current_node.left == None and self.current_node.right != None:
+      if value < self.parent.value:
+        self.parent.left = self.current_node.right
+      else:
+        self.parent.right = self.current_node.right
+    
 head = Node(1)
 BST = NodeMgmt(head)
 BST.insert(2)
