@@ -1,13 +1,11 @@
 n = int(input())
-res = list(map(int, input().split()))
-score = 0
+result = map(int, input().split())
 cnt = 0
-
-for num in res:
-  if num == 1:
+score = 0
+for i in result:
+  if i == 1:
     cnt += 1
     score += cnt
   else:
     cnt = 0
-
 print(score)
