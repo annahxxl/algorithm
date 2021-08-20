@@ -1,23 +1,31 @@
+'''
+# my solution: O(NlogN)
 n = int(input())
-first = list(map(int, input().split()))
+a = list(map(int, input().split()))
 m = int(input())
-second = list(map(int, input().split()))
-p1 = p2 = 0 # 각 리스트의 포인터
-res = []
+b = list(map(int, input().split()))
+result = sorted(a + b)
+for i in result:
+  print(i, end=' ')
+'''
 
-while p1<n and p2<m:
-  if first[p1] <= second[p2]:
-    res.append(first[p1])
-    p1 += 1
+# other solution (병합 정렬): O(N)
+n = int(input())
+a = list(map(int, input().split()))
+m = int(input())
+b = list(map(int, input().split()))
+ap, bp = 0, 0 # 포인터
+result = list()
+while ap < len(a) and bp < len(b):
+  if a[ap] < b[bp]:
+    result.append(a[ap])
+    ap += 1
   else:
-    res.append(second[p2])
-    p2 += 1
-    
-if p1 < n:
-  res = res + first[p1:]
-
-if p2 < m:
-  res = res + second[p2:]
-  
-for i in res:
+    result.append(b[bp])
+    bp += 1
+if ap == len(a):
+  result += b[bp:]
+elif bp == len(b):
+  result += a[ap:]
+for i in result:
   print(i, end=' ')
