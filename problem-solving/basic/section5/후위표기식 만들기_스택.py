@@ -1,27 +1,24 @@
-s = input()
-stack = []
+ex = input()
+stack = list()
 res = ''
-
-for x in s:
-  if x.isdecimal():
-    res += x
+for s in ex:
+  if s.isdigit():
+    res += s
   else:
-    if x == '(':
-      stack.append(x)
-    elif x=='*' or x=='/':
-      while stack and (stack[-1]=='*' or stack[-1]=='/'):
+    if s == '(':
+      stack.append(s)
+    elif s == '*' or s == '/':
+      while stack and (stack[-1] == '*' or stack[-1] == '/'):
         res += stack.pop()
-      stack.append(x)
-    elif x=='+' or x=='-':
-      while stack and stack[-1]!='(':
+      stack.append(s)
+    elif s == '+' or s == '-':
+      while stack and stack[-1] != '(':
         res += stack.pop()
-      stack.append(x)
-    elif x == ')':
-      while stack and stack[-1]!='(':
+      stack.append(s)
+    elif s == ')':
+      while stack and stack[-1] != '(':
         res += stack.pop()
       stack.pop()
-      
 while stack:
   res += stack.pop()
-  
 print(res)
