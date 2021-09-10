@@ -1,24 +1,22 @@
-s = input()
-stack = []
-
-for x in s:
-  if x.isdecimal():
-    stack.append(int(x))
-  elif x == '+':
-    n1 = stack.pop()
-    n2 = stack.pop()
-    stack.append(n2+n1)
-  elif x == '-':
-    n1 = stack.pop()
-    n2 = stack.pop()
-    stack.append(n2-n1)
-  elif x == '*':
-    n1 = stack.pop()
-    n2 = stack.pop()
-    stack.append(n2*n1)
-  elif x == '/':
-    n1 = stack.pop()
-    n2 = stack.pop()
-    stack.append(n2/n1)
-    
+ex = input()
+stack = list()
+for s in ex:
+  if s.isdigit():
+    stack.append(int(s))
+  elif s == '+':
+    a = stack.pop()
+    b = stack.pop()
+    stack.append(b + a)
+  elif s == '-':
+    a = stack.pop()
+    b = stack.pop()
+    stack.append(b - a)
+  elif s == '*':
+    a = stack.pop()
+    b = stack.pop()
+    stack.append(b * a)
+  elif s == '/':
+    a = stack.pop()
+    b = stack.pop()
+    stack.append(b / a)
 print(stack[0])
