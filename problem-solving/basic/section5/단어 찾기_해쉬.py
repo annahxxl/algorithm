@@ -1,15 +1,22 @@
+'''
+# my solution
 n = int(input())
-poem = dict()
+note = [input() for _ in range(n)]
+for _ in range(n-1):
+  note.remove(input())
+print(note.pop())
+'''
 
-for i in range(n):
+# other solution
+n = int(input())
+note = dict()
+for _ in range(n):
   word = input()
-  poem[word] = 0
-  
-for i in range(n-1):
+  note[word] = 0
+for _ in range(n-1):
   word = input()
-  poem[word] = 1 # 시에 쓰인 단어 체크
-  
-for key, val in poem.items():
+  note[word] = 1
+for key, val in note.items():
   if val == 0:
     print(key)
     break
