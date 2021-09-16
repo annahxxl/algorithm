@@ -1,16 +1,14 @@
-import heapq as hq # 파이썬의 보통 리스트를 마치 최소 힙처럼 다룰 수 있도록 도와주는 모듈
+import heapq
 
-tree = []
-
+hq = list()
 while True:
-  num = int(input())
-  if num == -1:
+  n = int(input())
+  if n == -1:
     break
-  elif num == 0:
-    if len(tree) == 0:
-      print(-1)
-      break
+  if n == 0:
+    if hq:
+      print(heapq.heappop(hq))
     else:
-      print(hq.heappop(tree))
+      print(-1)
   else:
-    hq.heappush(tree, num)
+    heapq.heappush(hq, n)
