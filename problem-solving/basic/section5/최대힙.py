@@ -1,16 +1,14 @@
-import heapq as hq # 기본적으로 최소힙으로 작동
+import heapq # 기본적으로 최소힙으로 작동
 
-tree = []
-
+hq = list()
 while True:
-  num = int(input())
-  if num == -1:
+  n = int(input())
+  if n == -1:
     break
-  elif num == 0:
-    if len(tree) == 0:
-      print(-1)
-      break
+  if n == 0:
+    if hq:
+      print(-heapq.heappop(hq))
     else:
-      print(-hq.heappop(tree))
+      print(-1)
   else:
-    hq.heappush(tree, -num)
+    heapq.heappush(hq, -n)
