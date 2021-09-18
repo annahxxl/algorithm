@@ -1,9 +1,9 @@
-def DFS(x):
-  if x == 0:
+def DFS(n):
+  if n == 0:
     return
   else:
-    DFS(x//2)
-    print(x%2, end='')
+    DFS(n // 2)
+    print(n % 2, end='')
 
 if __name__ == '__main__':
   n = int(input())
