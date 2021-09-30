@@ -1,3 +1,5 @@
+'''
+# solution 1
 n = int(input())
 nums_n = list(map(int, input().split()))
 m = int(input())
@@ -9,7 +11,8 @@ for num in nums_m:
   if num in dic:
     print(1)
   else:
-    print(0) 
+    print(0)
+'''
 
 '''
 - 파이썬에서는 dictionary 자료형을 해시처럼 사용할 수 있다.
@@ -29,3 +32,10 @@ for i in x:
   else:
     print(1)
 '''
+
+# solution 2
+n, A = int(input()), {i : 1 for i in list(map(int, input().split()))}
+m = int(input())
+for i in list(map(int, input().split())):
+  # print(1 if i in A else 0)
+  print(A.get(i, 0)) # 딕셔너리.get(key, default): 딕셔너리[key]가 존재하면 value, 없다면 default 출력 
