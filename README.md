@@ -1,1 +1,1 @@
-# Repository for algorithms learning 🐾
+# Repository for algorithm learning 🐾
