@@ -1,5 +1,4 @@
 def solution(array):
-    answer = []
     idx = 0
     num = array[idx]
     
