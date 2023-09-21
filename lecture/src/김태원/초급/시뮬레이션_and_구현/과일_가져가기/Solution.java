@@ -1,6 +1,4 @@
-package 김태원.초급.과일_가져가기;
-
-import java.util.*;
+package 김태원.초급.시뮬레이션_and_구현.과일_가져가기;
 
 class Solution {
 

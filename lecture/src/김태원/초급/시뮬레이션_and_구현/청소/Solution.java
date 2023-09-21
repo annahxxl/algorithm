@@ -1,4 +1,4 @@
-package 김태원.초급.청소;
+package 김태원.초급.시뮬레이션_and_구현.청소;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package 김태원.초급.회의실_만남;
+package 김태원.초급.시뮬레이션_and_구현.회의실_만남;
 
 import java.util.*;
 

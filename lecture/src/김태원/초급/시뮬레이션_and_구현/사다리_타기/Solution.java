@@ -1,4 +1,4 @@
-package 김태원.초급.사다리_타기;
+package 김태원.초급.시뮬레이션_and_구현.사다리_타기;
 
 import java.util.*;
 

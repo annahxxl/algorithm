@@ -1,4 +1,4 @@
-package 김태원.초급.잃어버린_강아지;
+package 김태원.초급.시뮬레이션_and_구현.잃어버린_강아지;
 
 class Solution {
     public int solution(int[][] board){

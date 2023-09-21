@@ -1,4 +1,4 @@
-package 김태원.초급.최대길이_바이토닉_수열;
+package 김태원.초급.시뮬레이션_and_구현.최대길이_바이토닉_수열;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package 김태원.초급.좌석_번호;
+package 김태원.초급.시뮬레이션_and_구현.좌석_번호;
 
 import java.util.Arrays;
 

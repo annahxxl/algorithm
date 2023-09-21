@@ -1,4 +1,4 @@
-package 김태원.초급.비밀번호;
+package 김태원.초급.시뮬레이션_and_구현.비밀번호;
 
 import java.util.*;
 
