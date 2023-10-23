@@ -1,4 +1,4 @@
-package 김태원.초급.해싱_and_파싱.서로_다른_빈도수_만들기;
+package 김태원.초급.해싱_and_시간파싱.서로_다른_빈도수_만들기;
 
 import java.util.*;
 

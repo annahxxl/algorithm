@@ -1,4 +1,4 @@
-package 김태원.초급.해싱_and_파싱.경고_메일;
+package 김태원.초급.해싱_and_시간파싱.경고_메일;
 
 import java.util.*;
 

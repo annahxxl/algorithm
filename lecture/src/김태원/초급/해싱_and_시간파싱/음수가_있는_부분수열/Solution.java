@@ -1,4 +1,4 @@
-package 김태원.초급.해싱_and_파싱.음수가_있는_부분수열;
+package 김태원.초급.해싱_and_시간파싱.음수가_있는_부분수열;
 
 import java.util.*;
 

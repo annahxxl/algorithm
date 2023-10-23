@@ -1,4 +1,4 @@
-package 김태원.초급.해싱_and_파싱.회장_선거;
+package 김태원.초급.해싱_and_시간파싱.회장_선거;
 
 import java.util.*;
 import java.util.stream.Collectors;

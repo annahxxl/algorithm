@@ -1,4 +1,4 @@
-package 김태원.초급.해싱_and_파싱.문서_도난;
+package 김태원.초급.해싱_and_시간파싱.문서_도난;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package 김태원.초급.해싱_and_파싱.한_번_사용한_최초_문자;
+package 김태원.초급.해싱_and_시간파싱.한_번_사용한_최초_문자;
 
 import java.util.HashMap;
 import java.util.Map;
