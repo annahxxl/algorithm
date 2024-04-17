@@ -5,9 +5,7 @@ import java.util.StringTokenizer;
 public class Main {
 
 	static int N, K;
-	static int max;
 	static int[] nums;
-	static int[] count = new int[100001];
 
 	static int solution() {
 		int[] count = new int[100001];
